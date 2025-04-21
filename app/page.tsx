@@ -8,7 +8,7 @@ export default function HomePage() {
   const router = useRouter();
 
   const handleGetStarted = () => {
-    router.push("/homepage"); // Navigate to the home page
+    router.push("/"); // Navigate to the home page
   };
 
   return (
