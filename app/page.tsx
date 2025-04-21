@@ -1,28 +1,17 @@
-import { useRouter } from "next/navigation";
-
-// app/page.tsx
-"use client";
-
+import NavBar from '../components/NavBar';
 
 export default function HomePage() {
-  const router = useRouter();
-
-  const handleGetStarted = () => {
-    router.push("/"); // Navigate to the home page
-  };
-
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-      <h1 className="text-5xl font-extrabold mb-6">Welcome to My Awesome App!</h1>
-      <p className="text-xl mb-4">
-        Explore the power of Next.js with TypeScript and build amazing web applications.
-      </p>
-      <button
-        onClick={handleGetStarted}
-        className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200"
-      >
-        Get Started
-      </button>
-    </main>
+    <>
+      <NavBar />
+      <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-4">
+          Welcome to MYYENI
+        </h1>
+        <p className="text-lg text-center text-gray-600 max-w-xl">
+          This is a simple homepage !
+        </p>
+      </main>
+    </>
   );
 }
