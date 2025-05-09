@@ -28,14 +28,14 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="w-full bg-white dark:bg-gray-900 shadow-md p-4 flex justify-between items-center text-gray-800 dark:text-gray-100">
+    <nav className="sticky top-0 z-50 w-full bg-white dark:bg-gray-900 shadow-md p-4 flex justify-between items-center text-gray-800 dark:text-gray-100">
       <div className="text-xl font-extrabold text-blue-600 dark:text-blue-400">MYYENI</div>
-      
+
       <div className="flex items-center space-x-6">
         <Link href="/" className="hover:text-blue-500 dark:hover:text-blue-400">Home</Link>
         <Link href="/about" className="hover:text-blue-500 dark:hover:text-blue-400">About</Link>
         <Link href="/contact" className="hover:text-blue-500 dark:hover:text-blue-400">Contact</Link>
-        
+
         <button
           onClick={toggleTheme}
           className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:scale-105 transition"
