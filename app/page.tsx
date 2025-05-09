@@ -4,6 +4,12 @@ export default function HomePage() {
   return (
     <>
       <NavBar />
+      <div className="overflow-hidden whitespace-nowrap bg-blue-100 py-2">
+        <div className="inline-block animate-marquee text-blue-700 text-lg font-semibold">
+          🚀 Welcome to MYYENI – It is Under-Development!!!
+        </div>
+      </div>
+
       <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-6 py-12">
         {/* Hero Section */}
         <section className="text-center mb-12">
