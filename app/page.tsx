@@ -6,7 +6,7 @@ export default function HomePage() {
       <NavBar />
       <div className="overflow-hidden whitespace-nowrap bg-blue-100 py-2">
         <div className="inline-block animate-marquee text-blue-700 text-lg font-semibold">
-          🚀 Welcome to MYYENI – It is Under-Development!!!
+          🚀 Welcome to MYYENI – It is Under-Development!!!!
         </div>
       </div>
 
