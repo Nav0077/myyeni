@@ -9,7 +9,7 @@ export default function HomePage() {
           Welcome to MYYENI
         </h1>
         <p className="text-lg text-center text-gray-600 max-w-xl">
-          This is a homepage !
+          This is a homepage !!
         </p>
       </main>
     </>
