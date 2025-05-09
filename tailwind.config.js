@@ -8,8 +8,8 @@ module.exports = {
             },
             keyframes: {
                 marquee: {
-                    '0%': { transform: 'translateX(100%)' },
-                    '100%': { transform: 'translateX(-100%)' },
+                    '0%': { transform: 'translateX(100%)' }, // Start from right
+                    '100%': { transform: 'translateX(-100%)' }, // End at left
                 },
             },
         },
