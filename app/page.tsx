@@ -1,7 +1,13 @@
 "use client";
+import { useRouter } from 'next/navigation';
 import NavBar from '../components/NavBar';
 
 export default function HomePage() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/Notice_Page');
+  };
   return (
     <>
       <NavBar />
@@ -19,7 +25,10 @@ export default function HomePage() {
             Discover tools and features that empower your daily productivity. Fast, secure, and intuitive.
           </p>
           <div className="flex justify-center gap-4">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition">
+            <button
+              className="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition"
+              onClick={handleClick}
+            >
               Get Started
             </button>
             <button className="bg-gray-200 text-gray-800 px-6 py-2 rounded-xl hover:bg-gray-300 transition">
