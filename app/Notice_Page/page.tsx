@@ -2,16 +2,44 @@
 
 export default function MovingMessage() {
   return (
-    <div className="container">
-      <div className="message">Welcome to MYYENI, This Page is Under-Development!!!!</div>
+    <>
+      <nav className="navbar">
+        <div className="nav-content">🔧 MYYENI Navbar</div>
+      </nav>
+
+      <div className="container">
+        <div className="message">
+          Welcome to MYYENI, This Page is Under-Development!!!!
+        </div>
+      </div>
 
       <style jsx>{`
+        body, html {
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+        }
+
+        .navbar {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background: #333;
+          color: white;
+          padding: 1rem;
+          text-align: center;
+          font-weight: bold;
+          z-index: 999;
+        }
+
         .container {
           height: 100vh;
           display: flex;
           justify-content: center;
           align-items: center;
           background: #f0f0f0;
+          padding-top: 60px; /* to avoid hiding behind navbar */
+          box-sizing: border-box;
         }
 
         .message {
@@ -38,6 +66,6 @@ export default function MovingMessage() {
           }
         }
       `}</style>
-    </div>
+    </>
   );
 }

@@ -35,6 +35,7 @@ export default function NavBar() {
         <Link href="/" className="hover:text-blue-500 dark:hover:text-blue-400">Home</Link>
         <Link href="/about" className="hover:text-blue-500 dark:hover:text-blue-400">About</Link>
         <Link href="/contact" className="hover:text-blue-500 dark:hover:text-blue-400">Contact</Link>
+        <Link href="/apps" className="hover:text-blue-500 dark:hover:text-blue-400">Apps</Link>
 
         <button
           onClick={toggleTheme}
