@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
+export const dynamic = 'force-static';
+export const revalidate = 3600;
+
 export async function GET() {
   try {
     const filePath = path.join(process.cwd(), 'app', 'apps', 'APPS_APK', 'automute_logo.png');
