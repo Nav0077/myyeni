@@ -14,6 +14,10 @@ export async function POST(req: NextRequest) {
 
     const formData = await req.formData();
     const file = formData.get('file');
+    const titleRaw = formData.get('title');
+    const descriptionRaw = formData.get('description');
+    const title = typeof titleRaw === 'string' ? titleRaw.trim() : '';
+    const description = typeof descriptionRaw === 'string' ? descriptionRaw.trim() : '';
 
     if (!file || typeof file === 'string') {
       return NextResponse.json({ error: 'No file uploaded' }, { status: 400 });
@@ -31,7 +35,23 @@ export async function POST(req: NextRequest) {
 
     fs.writeFileSync(filePath, buffer);
 
-    return NextResponse.json({ success: true, path: `/apps/${safeName}` });
+    // Update manifest.json with metadata
+    const manifestPath = path.join(uploadDir, 'manifest.json');
+    let manifest: Record<string, { title: string; description?: string }> = {};
+    if (fs.existsSync(manifestPath)) {
+      try {
+        const raw = fs.readFileSync(manifestPath, 'utf8');
+        manifest = JSON.parse(raw);
+      } catch {
+        manifest = {};
+      }
+    }
+    const defaultTitle = (title && title.length > 0) ? title : safeName.replace(/\.[^/.]+$/, '');
+    manifest[safeName] = { title: defaultTitle, description };
+    fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+
+    // Redirect back to the Apps page
+    return NextResponse.redirect(new URL('/apps', req.url));
   } catch (err: any) {
     console.error('Upload error:', err);
     return NextResponse.json({ error: 'Upload failed', detail: err?.message }, { status: 500 });
