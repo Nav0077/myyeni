@@ -112,7 +112,7 @@ export default async function AppsPage() {
                   <p className="text-xs text-gray-500 dark:text-gray-500">{formatBytes(size)} • {new Date(mtime).toLocaleString()}</p>
                   <div className="mt-4 flex gap-3">
                     <a
-                      href={href}
+                      href={`${href}`}
                       download
                       className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
                     >
