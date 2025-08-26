@@ -1,0 +1,21 @@
+MYYENI Windows Setup (Placeholder)
+=================================
+
+Version: 0.1.0
+Build: DEV
+
+This is a placeholder file to enable the Download button on the MYYENI homepage.
+Replace this file with your actual installer package (e.g., .exe, .msi, or .zip) when ready.
+
+Recommended replacement steps:
+1) Build your installer (Windows .exe/.msi or cross-platform .zip)
+2) Place it here: public/apps/
+3) Update links in app/page.tsx to point to the new filename if it differs
+4) (Optional) Update public/apps/manifest.json to provide a friendly title and description
+
+Changelog:
+- 0.1.0: Initial placeholder uploaded
+
+Notes:
+- Files placed in the public/ directory are served statically by Next.js.
+- A file at public/apps/<name> will be available at https://<your-domain>/apps/<name>
