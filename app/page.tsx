@@ -41,11 +41,11 @@ export default function HomePage() {
 
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/apps/automute_logo.png"
+                href="/apps/app-debug.apk"
                 download
                 className="inline-flex items-center gap-2 rounded-xl bg-blue-600 text-white px-5 py-3 text-sm font-semibold shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                <Download className="h-4 w-4" /> Download for Windows
+                <Download className="h-4 w-4" /> Download for Windows or Mobile
               </Link>
               <a
                 href="#features"
